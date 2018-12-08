@@ -9,7 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9af047af58724be478c4f8bcb7496b55, type: 3}
-  m_Name: Legsgear
+  m_Name: _Legsgear
   m_EditorClassIdentifier: 
-  _bodyPart: 0
-  _itemList: []
+  _bodyPart: 3
+  _itemList:
+  - {fileID: 11400000, guid: ce0e04fa03ee2244a864f6f9bc659fef, type: 2}
+  - {fileID: 11400000, guid: f29b21c5ea8f053468d3196ecf0cded5, type: 2}
+  - {fileID: 11400000, guid: 6d754eec99f6145468c0428a142460e2, type: 2}

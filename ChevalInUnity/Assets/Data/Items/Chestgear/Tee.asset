@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: add6edf52ba392848b4bdb4171b42f5d, type: 3}
   m_Name: Tee
   m_EditorClassIdentifier: 
-  _bodypart: 0
-  _description: 
-  _illustration: {fileID: 0}
+  _bodypart: 2
+  _description: '"A simple T-shirt."'
+  _illustration: {fileID: 21300000, guid: 7df6b8ed842ba9441930c49d6b251224, type: 3}

@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: add6edf52ba392848b4bdb4171b42f5d, type: 3}
   m_Name: None
   m_EditorClassIdentifier: 
-  _bodypart: 0
-  _description: 
-  _illustration: {fileID: 0}
+  _bodypart: 3
+  _description: '"Nothing to cover your legs, and what''s between..."'
+  _illustration: {fileID: 21300000, guid: 071d3cb396c77ef49a6d9f10a66f0978, type: 3}

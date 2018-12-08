@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ItemCardDisplay : MonoBehaviour {
+public class ItemCard : MonoBehaviour {
 
     public Item _item;
 
@@ -14,11 +14,15 @@ public class ItemCardDisplay : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //_name.text = _item._name;
         _name.text = _item.name;
         _bodypart.text = "[" + _item._bodypart.ToString() + "]";
         _description.text = _item._description;
         _illustration.sprite = _item._illustration;
 	}
+
+    public void OnClicked()
+    {
+        Character.instance.AssignItem(_item);
+    }
 
 }

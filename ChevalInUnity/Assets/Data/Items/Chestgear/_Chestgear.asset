@@ -9,7 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9af047af58724be478c4f8bcb7496b55, type: 3}
-  m_Name: Chestgear
+  m_Name: _Chestgear
   m_EditorClassIdentifier: 
-  _bodyPart: 0
-  _itemList: []
+  _bodyPart: 2
+  _itemList:
+  - {fileID: 11400000, guid: 106b78b7f707ca54baa49c4e86a15314, type: 2}
+  - {fileID: 11400000, guid: 5ac08dbfe6d531e44b2477512b5a5bd5, type: 2}
+  - {fileID: 11400000, guid: 9f36baf6dfd7c9a4a8e38fde3148b483, type: 2}

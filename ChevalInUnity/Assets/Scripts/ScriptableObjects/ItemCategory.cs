@@ -6,9 +6,7 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "New ItemCategory", menuName = "ItemCategory")]
 public class ItemCategory : ScriptableObject
 {
-    public enum BodyPart {None, Head, Chest, Legs};
-
-    public BodyPart _bodyPart;
+    public Character.Bodypart _bodyPart;
     public List<Item> _itemList = new List<Item>();
 
 
