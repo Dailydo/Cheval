@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9af047af58724be478c4f8bcb7496b55, type: 3}
+  m_Name: Headgear
+  m_EditorClassIdentifier: 
+  _bodyPart: 1
+  _itemList:
+  - {fileID: 11400000, guid: 08782e51cc1354049b52976878cfa071, type: 2}
+  - {fileID: 11400000, guid: 642aa43e6cb2f4b4f96b0d171f197b52, type: 2}
+  - {fileID: 11400000, guid: 1a750885c4b698b4086ecd77aff5ab2a, type: 2}
