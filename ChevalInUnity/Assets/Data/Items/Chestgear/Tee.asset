@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bodypart: 2
   _description: '"A simple T-shirt."'
-  _illustration: {fileID: 21300000, guid: 7df6b8ed842ba9441930c49d6b251224, type: 3}
+  _icon: {fileID: 21300000, guid: 7df6b8ed842ba9441930c49d6b251224, type: 3}

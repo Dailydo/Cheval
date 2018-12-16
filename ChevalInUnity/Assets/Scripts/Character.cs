@@ -1,58 +1,45 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class Character : MonoBehaviour {
 
-    public static Character instance = null;              //Static instance of GameManager which allows it to be accessed by any other script
+    #region Singleton
 
-    public enum Bodypart { None, Head, Chest, Legs };
-
-    [System.Serializable]       
-    public struct CharacterItem     //A reference to the item currently equiped and the gameobject containing its image on the character
-    {
-        public Item _item;
-        public GameObject _characterGameobject;
-    }
-
-    public CharacterItem _head;
-    public CharacterItem _chest;
-    public CharacterItem _legs;
-
+    public static Character instance = null;              
 
     void Awake()
     {
-        if (instance == null)       //Check if instance already exists            
-            instance = this;        //if not, set instance to this
-        else if (instance != this)      //If instance already exists and it's not this:
-            Destroy(gameObject);    //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a Character_Manager
-        //DontDestroyOnLoad(gameObject);            
+        if (instance != null)
+        {
+            Debug.LogWarning("More than one instance of Character found.");
+            return;
+        }
+
+        instance = this;
     }
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update (){
+    #endregion
 
-    }
+    public enum Bodypart { None, Head, Chest, Legs };
 
-    //Assigns item as current item for the embed bodypart
-    public void AssignItem (Item item)
+    public GameObject _head;
+    public GameObject _chest;
+    public GameObject _legs;
+
+
+    public void EquipItem(Item item)
     {
-        CharacterItem itemDef = GetBodypartGameobject(item._bodypart);
-        itemDef._item = item;
-        itemDef._characterGameobject.GetComponent<Image>().sprite = item._illustration;
+        GameObject characterSlot = GetGameobjectForBodypart(item._bodypart);
+        characterSlot.GetComponent<Image>().sprite = item._icon;
     }
 
-    //Returns the CharacterItem in the character that matches the passed bodypart
-    CharacterItem GetBodypartGameobject(Bodypart bodypart)
+    public GameObject GetGameobjectForBodypart(Bodypart bodypart)
     {
-        CharacterItem result = new CharacterItem();
+        GameObject result = new GameObject();
 
-        switch(bodypart)
+        switch (bodypart)
         {
             case Bodypart.Head:
                 result = _head;
@@ -64,7 +51,7 @@ public class Character : MonoBehaviour {
                 result = _legs;
                 break;
             default:
-                Debug.Log("Unknown bodypart, unable to return a matching gameobject in Character.");
+                Debug.Log("Gameobject unknown for specified bodypart");
                 break;
         }
 

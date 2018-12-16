@@ -4,18 +4,50 @@ using UnityEngine;
 
 public class ItemsManager : MonoBehaviour {
 
-    public List<ItemCategory> _itemCategories = new List<ItemCategory>();
+    #region Singleton
 
+    public static ItemsManager instance = null;
 
-    // Use this for initialization
-    void Start()
+    void Awake()
     {
-        
+        if (instance != null)
+        {
+            Debug.LogWarning("More than one instance of ItemsManager found.");
+            return;
+        }
+
+        instance = this;
     }
 
-    public void UpdateItemCategoryProperties()          
+    #endregion
+
+    public ItemCategory _headCategory;
+    public ItemCategory _chestCategory;
+    public ItemCategory _legsCategory;
+
+
+    //Returns a list of items for a specific bodypart
+    public List<Item> GetItemsFromBodypart(Character.Bodypart bodypart)
     {
-        foreach (ItemCategory itemCategory in _itemCategories)
-            itemCategory.UpdateItemsProperties();
+        List<Item> result = new List<Item>();
+
+        switch (bodypart)
+        {
+            case Character.Bodypart.Head:
+                result = _headCategory._itemList;
+                break;
+            case Character.Bodypart.Chest:
+                result = _chestCategory._itemList;
+                break;
+            case Character.Bodypart.Legs:
+                result = _legsCategory._itemList;
+                break;
+            default:
+                Debug.Log("Unknown bodypart");
+                break;
+        }
+
+        return result;
     }
+
 }

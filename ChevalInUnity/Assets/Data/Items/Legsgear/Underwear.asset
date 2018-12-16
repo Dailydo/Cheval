@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bodypart: 3
   _description: '"Only the best of men face cold in these ragged garments."'
-  _illustration: {fileID: 21300000, guid: 7e07058a28797b847b67e88b2c293b57, type: 3}
+  _icon: {fileID: 21300000, guid: 7e07058a28797b847b67e88b2c293b57, type: 3}

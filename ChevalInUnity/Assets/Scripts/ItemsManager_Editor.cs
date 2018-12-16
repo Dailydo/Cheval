@@ -10,9 +10,9 @@ public class ItemsManager_Editor : Editor {
 
         ItemsManager _itemManager = (ItemsManager)target;
 
-        if (GUILayout.Button("Update items properties"))
+        if (GUILayout.Button("Reference button"))
         {
-            _itemManager.UpdateItemCategoryProperties();
+            Debug.Log("Reference button clicked.");
         }
     }
 
