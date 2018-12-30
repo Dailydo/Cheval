@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Name: Hair
   m_EditorClassIdentifier: 
   _bodypart: 1
+  _name: Hair
   _description: '"Just hair, with a lame cut."'
-  _icon: {fileID: 21300000, guid: 7d682d9a419aee14d864de9212dc6a16, type: 3}
+  _illustration: {fileID: 21300000, guid: 7d682d9a419aee14d864de9212dc6a16, type: 3}
+  _icon: {fileID: 21300000, guid: c83dbb1411b255044a18843822713851, type: 3}

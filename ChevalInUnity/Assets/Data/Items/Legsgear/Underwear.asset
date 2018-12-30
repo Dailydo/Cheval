@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Name: Underwear
   m_EditorClassIdentifier: 
   _bodypart: 3
+  _name: Underwear
   _description: '"Only the best of men face cold in these ragged garments."'
-  _icon: {fileID: 21300000, guid: 7e07058a28797b847b67e88b2c293b57, type: 3}
+  _illustration: {fileID: 21300000, guid: 7e07058a28797b847b67e88b2c293b57, type: 3}
+  _icon: {fileID: 21300000, guid: 7b1d08729b9f47740af63d35904b2bd9, type: 3}

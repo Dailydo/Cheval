@@ -34,16 +34,27 @@ public class Inventory : MonoBehaviour {
         CleanInventoryUI();
     }
     
+    //Activate the item grid in the UI in case it weren't active
+    //IMPROVEMENT NOTE: (?) Check if inactive before activating
+    public void SetStatus(bool status)
+    {
+        gameObject.SetActive(status);
+    }
+
     public void CleanInventoryUI()
     {
         Debug.Log("Cleaning Inventory UI");
 
     }
 
+    //Clean then populate the item grid for the specified bodypart 
+    //IMPROVEMENT NOTE: Repopulate the grid if it current bodypart != from requested one
     public void UpdateOnBodypart(Character.Bodypart bodypart)
     {
         UpdateItemCategory(bodypart);
-        _activeItem = _itemGrid.GetComponent<ItemGrid>().PopulateGrid(bodypart);
+        _itemGrid.GetComponent<ItemGrid>().PopulateGrid(bodypart);
+
+        _activeItem = ItemsManager.instance.GetItemsFromBodypart(bodypart)[0];
         DisplayItem(_activeItem);
     }
 
@@ -53,6 +64,7 @@ public class Inventory : MonoBehaviour {
         UpdateItemDescription(item);
     }
 
+    //Display the bodypart name in the "Item category" part of the UI
     public void UpdateItemCategory(Character.Bodypart bodypart)
     {
         _itemCategoryName.GetComponent<Text>().text = bodypart.ToString().ToUpper();
@@ -63,6 +75,7 @@ public class Inventory : MonoBehaviour {
         _itemDescription.GetComponent<ItemDescription>().DisplayItemDescription(item);
     }
 
+    //Equip the _active item in the character's bodypart slot matching the item's
     public void EquipCurrentItem()
     {
         if (_activeItem)

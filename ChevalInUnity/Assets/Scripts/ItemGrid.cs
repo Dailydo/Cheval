@@ -6,12 +6,11 @@ public class ItemGrid : MonoBehaviour {
 
     public GameObject _itemSlot;
 
-
-    public Item PopulateGrid(Character.Bodypart bodypart)    
+    //Clear the item grid from its item slots and create add new ones, fed from the itemCategory list matching the requested bodypart
+    public void PopulateGrid(Character.Bodypart bodypart)    
     {
-        Item result = new Item();
+        Item result = ScriptableObject.CreateInstance<Item>();
 
-        //Clear current item grid
         foreach (Transform child in transform)
         {
             GameObject.Destroy(child.gameObject);
@@ -19,22 +18,15 @@ public class ItemGrid : MonoBehaviour {
 
         List<Item> itemList = ItemsManager.instance.GetItemsFromBodypart(bodypart);
 
-        bool firstItemReferenced = false;
-
         foreach (Item item in itemList)
-        {
-            if (!firstItemReferenced)
-            {
-                Debug.Log("Item passed: " + item.name.ToString());
-                result = item;
-                firstItemReferenced = true;
-            }
-               
+        {  
             GameObject newItemSlot = Instantiate(_itemSlot, transform);
             newItemSlot.GetComponent<ItemSlot>()._item = item;
-            newItemSlot.GetComponent<ItemSlot>()._icon.sprite = item._icon;
-        }
 
-        return result;
+            if (item._icon)     //if the item (data) contains an icon, use it as icon in the item slot, else use the item illustration
+                newItemSlot.GetComponent<ItemSlot>()._icon.sprite = item._icon;
+            else
+                newItemSlot.GetComponent<ItemSlot>()._icon.sprite = item._illustration;
+        }
     }
 }

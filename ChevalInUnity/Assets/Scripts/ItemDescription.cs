@@ -12,8 +12,13 @@ public class ItemDescription : MonoBehaviour {
 
     public void DisplayItemDescription(Item item)
     {
-        _itemName.GetComponent<Text>().text = item.name.ToString();
+        _itemName.GetComponent<Text>().text = item._name;
         _itemDescription.GetComponent<Text>().text = item._description;
-        _itemIcon.GetComponent<Image>().sprite = item._icon;
+
+        if (_itemIcon.GetComponent<Image>().sprite)
+            _itemIcon.GetComponent<Image>().sprite = item._icon;
+        else
+            _itemIcon.GetComponent<Image>().sprite = item._illustration;
+
     }
 }

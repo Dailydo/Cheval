@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Name: None
   m_EditorClassIdentifier: 
   _bodypart: 3
+  _name: Nothing
   _description: '"Nothing to cover your legs, and what''s between..."'
-  _icon: {fileID: 21300000, guid: 071d3cb396c77ef49a6d9f10a66f0978, type: 3}
+  _illustration: {fileID: 21300000, guid: 071d3cb396c77ef49a6d9f10a66f0978, type: 3}
+  _icon: {fileID: 21300000, guid: f22ab79ec2b5e7849b3e07885259fb29, type: 3}

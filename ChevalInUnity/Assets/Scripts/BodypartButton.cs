@@ -8,6 +8,7 @@ public class BodypartButton : MonoBehaviour {
 
     public void OnClicked()
     {
+        Inventory.instance.GetComponent<Inventory>().SetStatus(true);
         Inventory.instance.UpdateOnBodypart(_bodypart);
     }
 }

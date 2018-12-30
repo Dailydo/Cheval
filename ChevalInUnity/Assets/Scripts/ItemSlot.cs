@@ -13,6 +13,7 @@ public class ItemSlot : MonoBehaviour
         if (_item)
         {
             Inventory.instance.DisplayItem(_item);
+            Inventory.instance.EquipCurrentItem();
         }
         else
             Debug.Log("No item assigned to the clicked item slot");

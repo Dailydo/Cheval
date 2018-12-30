@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Name: Tee
   m_EditorClassIdentifier: 
   _bodypart: 2
+  _name: Tee
   _description: '"A simple T-shirt."'
-  _icon: {fileID: 21300000, guid: 7df6b8ed842ba9441930c49d6b251224, type: 3}
+  _illustration: {fileID: 21300000, guid: 7df6b8ed842ba9441930c49d6b251224, type: 3}
+  _icon: {fileID: 21300000, guid: 7e0522c459d142845a4f732f110fcc78, type: 3}

@@ -28,16 +28,16 @@ public class Character : MonoBehaviour {
     public GameObject _chest;
     public GameObject _legs;
 
-
+    //Equip the _active item in the character's bodypart slot matching the item's
     public void EquipItem(Item item)
     {
         GameObject characterSlot = GetGameobjectForBodypart(item._bodypart);
-        characterSlot.GetComponent<Image>().sprite = item._icon;
+        characterSlot.GetComponent<Image>().sprite = item._illustration;
     }
 
     public GameObject GetGameobjectForBodypart(Bodypart bodypart)
     {
-        GameObject result = new GameObject();
+        GameObject result = null;
 
         switch (bodypart)
         {

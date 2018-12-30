@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Name: Pants
   m_EditorClassIdentifier: 
   _bodypart: 3
+  _name: Pants
   _description: '"Pants. Nothing fancy."'
-  _icon: {fileID: 21300000, guid: 4666ecf468c54fe428c4c8e9dcbbfeee, type: 3}
+  _illustration: {fileID: 21300000, guid: 4666ecf468c54fe428c4c8e9dcbbfeee, type: 3}
+  _icon: {fileID: 21300000, guid: 85e4734593329c04d8c446f2db8e86e0, type: 3}
