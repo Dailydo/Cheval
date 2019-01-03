@@ -21,15 +21,15 @@ public class ItemsManager : MonoBehaviour {
 
     #endregion
 
-    public ItemCategory _headCategory;
-    public ItemCategory _chestCategory;
-    public ItemCategory _legsCategory;
+    public ItemCategory_SO _headCategory;
+    public ItemCategory_SO _chestCategory;
+    public ItemCategory_SO _legsCategory;
 
 
     //Returns a list of items for a specific bodypart
-    public List<Item> GetItemsFromBodypart(Character.Bodypart bodypart)
+    public List<Item_SO> GetItemsFromBodypart(Character.Bodypart bodypart)
     {
-        List<Item> result = new List<Item>();
+        List<Item_SO> result = new List<Item_SO>();
 
         switch (bodypart)
         {

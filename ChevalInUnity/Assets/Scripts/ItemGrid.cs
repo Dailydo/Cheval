@@ -9,16 +9,14 @@ public class ItemGrid : MonoBehaviour {
     //Clear the item grid from its item slots and create add new ones, fed from the itemCategory list matching the requested bodypart
     public void PopulateGrid(Character.Bodypart bodypart)    
     {
-        Item result = ScriptableObject.CreateInstance<Item>();
-
         foreach (Transform child in transform)
         {
             GameObject.Destroy(child.gameObject);
         }
 
-        List<Item> itemList = ItemsManager.instance.GetItemsFromBodypart(bodypart);
+        List<Item_SO> itemList = ItemsManager.instance.GetItemsFromBodypart(bodypart);
 
-        foreach (Item item in itemList)
+        foreach (Item_SO item in itemList)
         {  
             GameObject newItemSlot = Instantiate(_itemSlot, transform);
             newItemSlot.GetComponent<ItemSlot>()._item = item;

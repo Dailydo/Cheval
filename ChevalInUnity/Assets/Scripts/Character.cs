@@ -29,10 +29,10 @@ public class Character : MonoBehaviour {
     public GameObject _legs;
 
     //Equip the _active item in the character's bodypart slot matching the item's
-    public void EquipItem(Item item)
+    public void EquipItem(Item_SO item)
     {
         GameObject characterSlot = GetGameobjectForBodypart(item._bodypart);
-        characterSlot.GetComponent<Image>().sprite = item._illustration;
+        characterSlot.GetComponent<SpriteRenderer>().sprite = item._illustration;
     }
 
     public GameObject GetGameobjectForBodypart(Bodypart bodypart)

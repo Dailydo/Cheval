@@ -26,12 +26,12 @@ public class Inventory : MonoBehaviour {
     public GameObject _itemDescription;
     public GameObject _itemGrid;
 
-    public Item _activeItem;        //Item displayed in the Item Description panel
+    public Item_SO _activeItem;        //Item displayed in the Item Description panel
 
 
     void Start()
     {
-        CleanInventoryUI();
+        //CleanInventoryUI();
     }
     
     //Activate the item grid in the UI in case it weren't active
@@ -58,7 +58,7 @@ public class Inventory : MonoBehaviour {
         DisplayItem(_activeItem);
     }
 
-    public void DisplayItem(Item item)
+    public void DisplayItem(Item_SO item)
     {
         _activeItem = item;
         UpdateItemDescription(item);
@@ -70,7 +70,7 @@ public class Inventory : MonoBehaviour {
         _itemCategoryName.GetComponent<Text>().text = bodypart.ToString().ToUpper();
     }
 
-    public void UpdateItemDescription(Item item)
+    public void UpdateItemDescription(Item_SO item)
     {
         _itemDescription.GetComponent<ItemDescription>().DisplayItemDescription(item);
     }

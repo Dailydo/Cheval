@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [CreateAssetMenu(fileName ="New Item", menuName ="Item")]
-public class Item : ScriptableObject {
+public class Item_SO : ScriptableObject {
 
     public Character.Bodypart _bodypart;        //NOTE: make it private at some point
 

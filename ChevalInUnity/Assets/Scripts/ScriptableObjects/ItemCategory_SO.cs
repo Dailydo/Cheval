@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "New ItemCategory", menuName = "ItemCategory")]
-public class ItemCategory : ScriptableObject
+public class ItemCategory_SO: ScriptableObject
 {
     public Character.Bodypart _bodyPart;
-    public List<Item> _itemList = new List<Item>();
+    public List<Item_SO> _itemList = new List<Item_SO>();
 }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ItemSlot : MonoBehaviour
 {
-    public Item _item;
+    public Item_SO _item;
     public Image _icon;
 
     public void OnClicked()

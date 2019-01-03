@@ -21,9 +21,19 @@ public class GlobalManager : MonoBehaviour {
 
     #endregion
 
+    public GameObject _dialog;
+
+
     // Use this for initialization
     void Start () {
-        SetInventoryStatus(false);
+        _dialog.SetActive(true);        //Make this a list for all key gameobjects to be activated?
+
+        if (!Dialog.instance._skipEntryDialog)
+            Dialog.instance.Appear();
+        else
+            Dialog.instance.Disappear();
+
+        Inventory.instance.UpdateOnBodypart(Character.Bodypart.Head);
 	}
 	
     public void SetInventoryStatus(bool status)     //Status true to activate, false to deactivate

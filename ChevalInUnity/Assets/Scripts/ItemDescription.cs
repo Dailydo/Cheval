@@ -10,7 +10,7 @@ public class ItemDescription : MonoBehaviour {
     public GameObject _itemIcon;
 
 
-    public void DisplayItemDescription(Item item)
+    public void DisplayItemDescription(Item_SO item)
     {
         _itemName.GetComponent<Text>().text = item._name;
         _itemDescription.GetComponent<Text>().text = item._description;
